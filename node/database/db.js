@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-const url = "mongodb://localhost:27017/My_DB"  //conectamos a la db de mongodb
+const url = "mongodb://localhost:27017/My_BD"  //conectamos a la db de mongodb
 mongoose.connect(url)
 
 

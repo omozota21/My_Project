@@ -3,7 +3,7 @@ import BlogModel from "../models/BlogModel.js";
 
 //** Métodos para el CRUD **/
 
-//Mostrar todos los registros
+//Mostrar todos los blogs
 export const getAllBlogs = async (req, res) => {
     try {
         const blogs = await BlogModel.find()
@@ -12,49 +12,53 @@ export const getAllBlogs = async (req, res) => {
         res.json( {message: error.message} )
     }
 }
-//Mostrar un registro
+//Mostrar un blog
 export const getBlog = async (req, res) => {
         try {
-            const blog = await BlogModel.findAll({
-                where:{ id:req.params.id }
-            })
-            res.json(blog[0])
+            const id = req.params.id
+            await BlogModel.findById({_id:id}).then ((blog)=>{
+            res.status(200).json(blog)
+        })
         } catch (error) {
             res.json( {message: error.message} )
         }
 }
-//Crear un registro
+//Crear un blog
 export const createBlog = async (req, res) => {
     try {
        await BlogModel.create(req.body)
-       res.json({
-           "message":"¡Registro creado correctamente!"
+       res.status(200).json({
+           "message":"¡blog creado correctamente!"
        })
     } catch (error) {
         res.json( {message: error.message} )
     }
 }
-//Actualizar un registro
+//Actualizar un blog
 export const updateBlog = async (req, res) => {
+   
     try {
-        await BlogModel.update(req.body, {
-            where: { id: req.params.id}
+        const id = req.params.id
+        await BlogModel.updateOne({_id: id}, req.body).then( res => {
+            console. log(res)
         })
-        res.json({
-            "message":"¡Registro actualizado correctamente!"
+        res. status (200).json({
+            "message": "¡blog actualizado correctamente!"
         })
-    } catch (error) {
-        res.json( {message: error.message} )
-    }
+        } catch (error) {
+            res.json( {message: error.message} )
+        }
 }
-//Eliminar un registro
+//Eliminar un blog
 export const deleteBlog = async (req, res) => {
     try {
-        await BlogModel.destroy({ 
-            where: { id : req.params.id }
+        const id = req.params.id
+        await BlogModel.deleteOne({_id: id}).then(res => {
+            console.log(res)
         })
-        res.json({
-            "message":"¡Registro eliminado correctamente!"
+        
+        res.status(200).json({
+            "message":"¡blog eliminado correctamente!"
         })
     } catch (error) {
         res.json( {message: error.message} )
