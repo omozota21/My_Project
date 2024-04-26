@@ -18,10 +18,10 @@ const CompCreateBlog = () => {
 
     return (
         <div>
-           <h3>Create POST</h3>
+           <h3>Crea una TAREA</h3>
            <form onSubmit={store}>
                 <div className='mb-3'>
-                    <label className='form-label'>Title</label>
+                    <label className='form-label'>Titulo</label>
                     <input
                         value={title}
                         onChange={ (e)=> setTitle(e.target.value)} 
@@ -30,7 +30,7 @@ const CompCreateBlog = () => {
                     />
                  </div>   
                  <div className='mb-3'>
-                     <label className='form-label'>Title</label>
+                     <label className='form-label'>Contenido</label>
                     <textarea
                         value={content}
                         onChange={ (e)=> setContent(e.target.value)} 
@@ -38,7 +38,7 @@ const CompCreateBlog = () => {
                         className='form-control'
                     />                 
                  </div>  
-                 <button type='submit' className='btn btn-primary'>Store</button>                  
+                 <button type='submit' className='btn btn-primary'>Almacenar</button>                  
            </form>
         </div>
     )

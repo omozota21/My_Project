@@ -30,21 +30,21 @@ const CompShowBlogs = () => {
                 <div className='col'>
                     <Link to="/create" className='btn btn-primary mt-2 mb-2'><i className="fas fa-plus"></i></Link>
                     <table className='table'>
-                        <thead className='table-primary'>
+                        <thead className='tableTheadBg'>
                             <tr>
-                                <th>Title</th>
-                                <th>Content</th>
-                                <th>Actions</th>
+                                <th>Titulo</th>
+                                <th>Contenido</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            { blogs.map ( (blog) => (
-                                <tr key={ blog.id}>
+                            { blogs.map ( (blog, index) => (
+                                <tr key={ index }>
                                     <td> { blog.title } </td>
                                     <td> { blog.content } </td>
                                     <td>
-                                        <Link to={`/edit/${blog.id}`} className='btn btn-info'><i className="fas fa-edit"></i></Link>
-                                        <button onClick={ ()=>deleteBlog(blog.id) } className='btn btn-danger'><i className="fas fa-trash-alt"></i></button>
+                                        <Link to={`/edit/${blog._id}`} className='btn btn-info'><i className="fas fa-edit"></i></Link>
+                                        <button onClick={ ()=>deleteBlog(blog._id) } className='btn btn-danger'><i className="fas fa-trash-alt"></i></button>
                                     </td>
                                 </tr>
                             )) }

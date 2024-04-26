@@ -23,7 +23,7 @@ function App() {
             <Route path='/edit/:id' element={ <CompEditBlog />} />
         </Routes>
       </BrowserRouter>
-      
+    
     </div>
   );
 }
