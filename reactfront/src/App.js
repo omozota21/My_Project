@@ -16,6 +16,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />        
       </header>
+      <div className='Tabla'>
       <BrowserRouter>
         <Routes>
             <Route path='/' element={ <CompShowBlogs />} />
@@ -23,7 +24,7 @@ function App() {
             <Route path='/edit/:id' element={ <CompEditBlog />} />
         </Routes>
       </BrowserRouter>
-    
+      </div>
     </div>
   );
 }
