@@ -1,3 +1,11 @@
+
+Arranque de los distintos Apartados: 
+
+My_Project\reactfront\ --> npm start 
+
+My_Project\node\ --> nodemon app  
+
+
 Este proyecto se compone de dos partes 
 
 La parte de la conectividad con la base de datos en
