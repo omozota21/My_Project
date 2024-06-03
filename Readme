@@ -1,4 +1,10 @@
-E creado un makefile para la facilidad de arranque del 
+Creacción Base de Datos:
+Para la conectividad con la base de datos aunque no haya una inicial con los datos intoducidos
+habría que crear una con el Nombre
+“My_DB”  y la colección llamada “blogs” 
+deberia funcionar todo correcto igualmente dejo una foto informativa  
+
+Además e creado un makefile para la facilidad de arranque del 
 programa si este falla siempre se podra hacer los comandos 
 manuales, dejados a continuación
 
@@ -7,12 +13,6 @@ Arranque de los distintos Apartados:
 My_Project\reactfront\ --> npm start 
 
 My_Project\node\ --> nodemon app  
-
-Creacción Base de Datos:
-Para la conectividad con la base de datos aunque no haya una inicial con los datos intoducidos
-solo con el hecho de crear una con el Nombre
-“My_DB”  y la colección llamada “blogs” 
-deberia funcionar todo correcto igualmente dejo una foto informativa 
 
 
 Este proyecto se compone de dos partes 
@@ -47,3 +47,20 @@ reactfront
             EditBlog
             ShowBlog
     App
+
+
+
+
+
+
+           
+  *   *
+*   M   *
+  * O *
+*   Z   *
+  * O *
+*   T   *
+  * A *
+*   *   *
+  *    *
+
