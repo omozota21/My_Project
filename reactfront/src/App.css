@@ -25,13 +25,14 @@
   }
 }
 
-<<<<<<< HEAD
+
 
 .Tabla{
   background-color: rgb(223, 181, 131);
   margin: 0 auto;
   width: 80%;
-=======
+}
+
 .Tabla {
   width: 80%;
   margin: 0 auto;
@@ -41,7 +42,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
->>>>>>> 8c02b747fa842eb0c09504b9f7452ae348459397
+
 
 .App-header {
   padding: 20px 0;
